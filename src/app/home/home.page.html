@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            หน้าหลัก
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="GoToProfile()">
+                <ion-icon slot="icon-only" name="person"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="content">
+        <ion-back-button></ion-back-button><br>
+        <div class="welcome">ยินดีต้อนรับคุณ....</div>
+        <div class="fullname">{{ auth.staff_name }} {{ auth.staff_lname }}</div>
+        <div class="menu">
+            <ion-grid><br>
+                <ion-row>
+                    <ion-col>
+                        <a (click)="GoToDocument()" class="menu-item">
+                            <ion-icon class="icon" name="document-text-outline"></ion-icon>
+                            <div class="menu-name">เอกสาร</div>
+                        </a>
+                    </ion-col>
+                    <ion-col>
+                        <a (click)="GoTodocadd()" class="menu-item">
+                            <ion-icon class="icon" name="add-outline"></ion-icon>
+                            <div class="menu-name">เพิ่มหนังสือ</div>
+                        </a>
+                    </ion-col>
+                    <ion-col>
+                        <a (click)="GoToSearch()" class="menu-item">
+                            <ion-icon class="icon" name="search-outline"></ion-icon>
+                            <div class="menu-name">ค้นหาหนังสือ</div>
+                        </a>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <!-- <div class="button">
+            <ion-button expand="block" size="large" (click)="Logout()" color="danger">ออกจากระบบ</ion-button>
+        </div> -->
+    </div>
+</ion-content>

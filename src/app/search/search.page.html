@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>ค้นหาหนังสือ</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="search">
+            <ion-searchbar placeholder="ค้นหา......."></ion-searchbar>
+        <ion-item *ngFor="let item of data">
+            <!-- <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="{{ image_part }}{{ item.image }}" />
+            </ion-thumbnail> -->
+            <ion-label>
+                {{ item.document_name }}
+                <div>
+                    {{ item.document_date }}
+                </div>
+                <div>
+                    {{ item.doc_type_id }}
+                </div>
+            </ion-label>
+            <ion-button slot="end" size="large" fill="clear" color="danger">
+                <!-- <ion-icon slot="icon-only" name="cart"></ion-icon> -->
+                <ion-icon name="document-text-outline"></ion-icon>
+            </ion-button>
+            <!-- <ion-button>
+                <ion-icon name='download-sharp'></ion-icon>
+            </ion-button> -->
+        </ion-item>
+    </div>
+</ion-content>

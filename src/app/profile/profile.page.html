@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>โปรไฟล์</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+            <ion-item>
+                <ion-label>ชื่อ-นามสกุล</ion-label>
+                <ion-label slot="end">{{ data.staff_name }} {{ data.staff_lname }}</ion-label>
+            </ion-item><br>
+        <ion-item>
+            <ion-label>ชื่อผู้ใช้งาน</ion-label>
+            <ion-label slot="end">{{ data.username }}</ion-label>
+        </ion-item><br>
+        <ion-item>
+            <ion-label>รหัสผ่าน</ion-label>
+            <ion-label slot="end">{{data.password}}</ion-label>
+        </ion-item><br>
+    </ion-list>
+    <div class="button">
+        <ion-button expand="block" size="large" (click)="Logout()" color="danger">ออกจากระบบ</ion-button>
+    </div>
+</ion-content>

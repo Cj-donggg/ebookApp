@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>เพิ่มหนังสือ</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="card">
+        <ion-item>
+            <ion-label>เลขที่หนังสือ</ion-label>
+            <ion-input type="text" [(ngModel)]="document_id"></ion-input>
+        </ion-item><br>
+        <ion-item>
+            <ion-label>ชื่อหนังสือ</ion-label>
+            <ion-input [(ngModel)]="document_name"></ion-input>
+        </ion-item><br>
+        <ion-item><br>
+            <ion-label>ประเภทหนังสือ</ion-label><br>
+            <ion-select interface="action-sheet" placeholder="เลือกประเภท" cancelText="ยกเลิก"
+                [(ngModel)]="doc_type_id">
+                <ion-select-option value="1">หนังสือภายใน</ion-select-option>
+                <ion-select-option value="2">หนังสือส่งออก</ion-select-option>
+                <ion-select-option value="3">หนังสือนำเข้า</ion-select-option>
+            </ion-select><br>
+        </ion-item><br>
+        <ion-item><br>
+            <ion-label>วันที่เพิ่มหนังสือ</ion-label>
+            <ion-input type="date" [(ngModel)]="document_date"></ion-input>
+        </ion-item><br>
+        <ion-item>
+            <input type="file" [(ngModel)]="document_file">
+        </ion-item><br>
+
+    </div>
+    <div class="card">
+        <ion-button expand="block" size="large" color="danger" (click)="Add()">ยืนยันการเพิ่ม</ion-button>
+    </div><br>
+</ion-content>

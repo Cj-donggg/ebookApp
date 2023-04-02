@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>เอกสาร</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-item *ngFor="let item of data">
+            <!-- <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="{{ image_part }}{{ item.image }}" />
+            </ion-thumbnail> -->
+            <ion-label>
+                {{ item.document_id }}
+                <div>
+                    {{ item.document_name }}
+                </div>
+                <div>
+                    {{ item.doc_type_id }}
+                </div>
+                <div>
+                    {{ item.document_date }}
+                </div>
+                <div>
+                    {{ item.document_file }}
+                </div>
+            </ion-label>
+            <ion-button slot="end" size="large" fill="clear" color="danger">
+                <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+            <ion-button size="large" fill="clear" color="medium">
+                <ion-icon name="document-text-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </div>
+    <!-- <div class="search">
+        <ion-searchbar></ion-searchbar>
+    </div> -->
+</ion-content>
